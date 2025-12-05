@@ -15,3 +15,9 @@ COPY . .
 RUN pnpm run build
 
 
+FROM alpine AS output
+
+WORKDIR /output
+
+COPY --from=build /app/dist ./dist
+
