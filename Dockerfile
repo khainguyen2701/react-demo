@@ -21,3 +21,5 @@ WORKDIR /output
 
 COPY --from=build /app/dist ./dist
 
+CMD ["sh", "-c", "ls -la ./dist"]
+
